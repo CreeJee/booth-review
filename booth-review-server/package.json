@@ -1,0 +1,7 @@
+{
+  "name": "booth-review-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "CreeJee",
+  "license": "MIT"
+}

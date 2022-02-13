@@ -1,0 +1,4 @@
+{
+    "private": true,
+    "workspaces": ["booth-review-client", "booth-review-server","booth-review-infra"]
+  }
