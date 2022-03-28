@@ -18,8 +18,10 @@ generator typegraphql {
 }
 
 model User {
-  uuid String @id() @db.Uuid()
-  name String /// 유저 이름 (자동생성됨) 
+  uuid     String @id() @db.Uuid()
+  name     String /// 유저 이름 (자동생성됨) 
   /// @TypeGraphQL.omit(output: true)
-  otp  String /// foo
+  otp      String /// foo
+  /// @TypeGraphQL.omit(output: true)
+  vrcToken String ///VRC oauth token
 }
