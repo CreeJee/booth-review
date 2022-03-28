@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator typegraphql {
+  provider                 = "typegraphql-prisma"
+  output                   = "generated/type-graphql"
+  emitTranspiledCode       = true
+  useUncheckedScalarInputs = true
+}
+
+model User {
+  uuid String @id() @db.Uuid()
+  name String /// 유저 이름 (자동생성됨) 
+  /// @TypeGraphQL.omit(output: true)
+  otp  String /// foo
+}
